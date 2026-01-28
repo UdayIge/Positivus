@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.testimonial-swiper .swiper-slide {
+  height: auto;
+}
+
+.testimonial-swiper .swiper-slide-next::after,
+.testimonial-swiper .swiper-slide-prev::after {
+  display: none;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  display: none;
+}
+
+.swiper-button-next-custom.swiper-button-disabled,
+.swiper-button-prev-custom.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tooltip {
+  color: #fff;
+  text-align: center;
+  min-height: clamp(200px, 25vw, 240px); /* CHANGE: Made max-width responsive, changed height to min-height */
+  font-size: clamp(0.75rem, 2.5vw, 1.125rem);
+
+    /* triangle dimension */
+  --a: 90deg; /* angle */
+  --h: clamp(1rem, 2vw, 1.5rem); /* height */
+  --p: 14%; /* triangle position (0%:left 100%:right) */
+  --r: clamp(25px, 5vw, 45px); /* the radius */
+  --b: 1px; /* border width  */
+  --c1: #B9FF66;
+  --c2: #191A23;
+
+  padding: clamp(1.5rem, 4vw, 2.5rem); /* CHANGE: Made padding responsive */
+  border-radius: var(--r) var(--r) min(var(--r),100% - var(--p) - var(--h)*tan(var(--a)/2)) min(var(--r),var(--p) - var(--h)*tan(var(--a)/2))/var(--r);
+  clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+      min(100%,var(--p) + var(--h)*tan(var(--a)/2)) 100%,
+      var(--p) calc(100% + var(--h)),
+      max(0%  ,var(--p) - var(--h)*tan(var(--a)/2)) 100%);
+  background: var(--c1);
+  border-image: conic-gradient(var(--c1) 0 0) fill 0/
+      var(--r) max(0%,100% - var(--p) - var(--h)*tan(var(--a)/2)) 0 max(0%,var(--p) - var(--h)*tan(var(--a)/2))/0 0 var(--h) 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: var(--b);
+  border-radius: inherit;
+  clip-path: polygon(0 100%,0 0,100% 0,100% 100%,
+      min(100% - var(--b),var(--p) + var(--h)*tan(var(--a)/2) - var(--b)*tan(45deg - var(--a)/4)) calc(100% - var(--b)),
+      var(--p) calc(100% + var(--h) - var(--b)/sin(var(--a)/2)),
+      max(var(--b),var(--p) - var(--h)*tan(var(--a)/2) + var(--b)*tan(45deg - var(--a)/4)) calc(100% - var(--b)));
+  background: var(--c2) content-box;
+  border-image: conic-gradient(var(--c2) 0 0) fill 0/
+      var(--r) max(var(--b),100% - var(--p) - var(--h)*tan(var(--a)/2)) 0 max(var(--b),var(--p) - var(--h)*tan(var(--a)/2))/0 0 var(--h) 0;
+}
