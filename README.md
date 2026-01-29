@@ -35,8 +35,8 @@ A modern, responsive landing page for **Positivus** — a digital marketing agen
 
 ```bash
 # Clone the repository
-git clone https://github.com/UdayIge/positivus-LP.git
-cd positivus-landing-page-react
+git clone [https://github.com/UdayIge/positivus-LP.git](https://github.com/UdayIge/positivus.git)
+cd positivus
 
 # Install dependencies
 npm install
