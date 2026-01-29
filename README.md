@@ -1,6 +1,24 @@
-# Positivus Landing Page
+<p align="center">
+  <h1 align="center">Positivus Landing Page</h1>
 
-A modern, responsive landing page for **Positivus** — a digital marketing agency. Built with React and Tailwind CSS, featuring a dark theme with vibrant green accents.
+  <p align="center">
+    A modern, responsive landing page for <strong>Positivus</strong> — a digital marketing agency. Built with React and Tailwind CSS, featuring a dark theme with vibrant green accents.
+    <br />
+    <a href="https://udayige.github.io/positivus/" target="_blank" ><strong>Live Demo »</strong></a>
+    <br />
+    <br />
+    <a href="#features">Features</a>
+    ·
+    <a href="#prerequisites">Prerequisites</a>
+    ·
+    <a href="#project-structure">Project Structure</a>
+    .
+    <a href="#license">License</a>
+    ·
+    <a href="https://github.com/UdayIge/positivus/issues">Issues</a>
+  </p>
+</p>
+
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite)
@@ -76,4 +94,10 @@ src/
 
 ## License
 
-MIT
+Distributed under the MIT License. See `LICENSE` for more info.
+
+---
+
+<p align="center">
+  Built by <a href="https://github.com/UdayIge">@UdayIge</a>
+</p>
