@@ -6,6 +6,7 @@ import WorkingProcess from './components/WorkingProcess';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
+// this is main app file
 const App = () => {
   return (
     <main>
